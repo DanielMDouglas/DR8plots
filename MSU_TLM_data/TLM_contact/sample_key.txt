@@ -1,0 +1,20 @@
+sample1
+	length: 2.490 - 2.564
+	width: 2.482 - 2.510
+	contact width: 2.556 - 2.560
+sample2
+	contact width: 1.916 - 1.896
+sample3
+	contact width: 1.296 - 1.280
+sample4
+	contact width: 0.658 - 0.624
+sample5
+	contact width: 0.312 - 0.314
+sample6
+	contact width: 0.156 - 0.176
+sample7
+	contact width: 0.110 - 0.108
+sample8
+	contact width: 0.060 - 0.068
+sample9
+	contact width: 0.024
