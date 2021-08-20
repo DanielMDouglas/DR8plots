@@ -1,20 +1,16 @@
-sample1
-	length: 2.490 - 2.564
-	width: 2.482 - 2.510
-	contact width: 2.556 - 2.560
-sample2
-	contact width: 1.916 - 1.896
-sample3
-	contact width: 1.296 - 1.280
-sample4
-	contact width: 0.658 - 0.624
-sample5
-	contact width: 0.312 - 0.314
-sample6
-	contact width: 0.156 - 0.176
-sample7
-	contact width: 0.110 - 0.108
-sample8
-	contact width: 0.060 - 0.068
-sample9
-	contact width: 0.024
+width: 2.538 - 2.538, 2.538
+length: 3.874 - 3.856, 2.865
+sample 1
+       contact: 2.590 - 2.574, 2.582
+sample 2
+       contact: 1.902 - 1.906, 1.904
+sample 3
+       contact: 1.268 - 1.258, 1.263
+sample 4
+       contact: 0.618 - o.638, 0.628
+sample 5
+       contact: 0.294 - 0.308, 0.301
+sample 6
+       contact: 0.088 - 0.112, 0.100
+sample 7
+       contact: 0.068 - 0.060, 0.064
