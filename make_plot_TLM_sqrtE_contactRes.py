@@ -38,8 +38,10 @@ upper_bound = [R + dR for R, dR in zip(Rcs, dRcs)]
 plt.plot(testFields, Rcs, color = DUNEdarkOrange)
 plt.fill_between(testFields, lower_bound, upper_bound, alpha = 0.5, color = DUNElightOrange)
 
-#plt.semilogy()
+# plt.semilogy()
 plt.grid()
+
+# plt.text(-.08, -0.8, '(b)', **plotLabelTextKwargs)
 
 plt.xlabel(r'$\sqrt{E}$ [(kV/cm)$^{1/2}$]')
 plt.ylabel(r'$R_C$ [G$\Omega$]')

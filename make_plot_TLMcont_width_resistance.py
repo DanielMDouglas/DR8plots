@@ -33,7 +33,7 @@ print (popt, pcov)
 fineLspace = np.linspace(0, 3, 1000)
 plt.plot(fineLspace, TLM_model(fineLspace, *popt))
 
-plt.text(1.e-1, 9.8, 'Field Strength = '+str(round(testField**2, 2))+' kV/cm')
+plt.text(1.e-1, 9.8, 'Field Strength = '+str(round(testField**2, 2))+' kV/cm', **textKwargs)
 #plt.text(1.e-1, 2.2, 'Field Strength = '+str(round(testField**2, 2))+' kV/cm')
 plt.xlabel(r'Contact Patch Width [cm]')
 plt.ylabel(r'Sample Resistance [G$\Omega$]')

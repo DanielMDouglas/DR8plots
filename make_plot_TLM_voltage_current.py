@@ -23,15 +23,14 @@ for item in data:
     ax.errorbar(V, I,
                 xerr = dV,
                 yerr = dI,
-                ls = "none",
-                fmt = 'o',
-                ms = 2,
-                label = item["label"])
+                label = item["label"],
+                **errorbarKwargs)
     
-ax.legend(ncol = 2, frameon = False)
+ax.legend(ncol = 1, **legendKwargs)
 ax.set_xlabel(r'Voltage [kV]')
 ax.set_ylabel(r'Current [mA]')
 
+# plt.text(-1.5, -0.01, '(a)', **plotLabelTextKwargs)
 plt.tight_layout()
 
 plt.savefig('TLM_length_current.png', dpi = 300)

@@ -1,31 +1,54 @@
 import numpy as np
 import os
 
+from style import *
+
 TLMmodelFitFilename = 'fitted_res_models.npy'
 
 if TLMmodelFitFilename in os.listdir('.'):
     data = np.load(TLMmodelFitFilename)
 else:
+    # data = [{"file": "MSU_TLM_data/TLM_length/sample2.dat",
+    #      "length": 1.292,
+    #      "label": r'1.292 cm',
+    #      "color": DUNEblue},
+    #     {"file": "MSU_TLM_data/TLM_length/sample4.dat",
+    #      "length": 1.869,
+    #      "label": r'1.869 cm',
+    #      "color": DUNElightOrange},
+    #     {"file": "MSU_TLM_data/TLM_length/sample1.dat",
+    #      "length": 2.544,
+    #      "label": r'2.544 cm',
+    #      "color": DUNEdarkOrange},
+    #     {"file": "MSU_TLM_data/TLM_length/sample5.dat",
+    #      "length": 3.108,
+    #      "label": r'3.108 cm',
+    #      "color": DUNEgreen},
+    #     {"file": "MSU_TLM_data/TLM_length/sample3.dat",
+    #      "length": 3.775,
+    #      "label": r'3.775 cm',
+    #      "color": DUNEgray},]
     data = [{"file": "MSU_TLM_data/TLM_length/sample2.dat",
-         "length": 1.292,
-         "label": r'1.292 cm',
-         "color": DUNEblue},
-        {"file": "MSU_TLM_data/TLM_length/sample4.dat",
-         "length": 1.869,
-         "label": r'1.869 cm',
-         "color": DUNElightOrange},
-        {"file": "MSU_TLM_data/TLM_length/sample1.dat",
-         "length": 2.544,
-         "label": r'2.544 cm',
-         "color": DUNEdarkOrange},
-        {"file": "MSU_TLM_data/TLM_length/sample5.dat",
-         "length": 3.108,
-         "label": r'3.108 cm',
-         "color": DUNEgreen},
-        {"file": "MSU_TLM_data/TLM_length/sample3.dat",
-         "length": 3.775,
-         "label": r'3.775 cm',
-         "color": DUNEgray},]
+             "length": 1.292,
+             "label": r'$\sfrac{1}{2}$"',
+             "color": DUNEblue},
+            {"file": "MSU_TLM_data/TLM_length/sample4.dat",
+             "length": 1.869,
+             "label": r'$\sfrac{3}{4}$"',
+             "color": DUNElightOrange},
+            {"file": "MSU_TLM_data/TLM_length/sample1.dat",
+             "length": 2.544,
+             "label": r'$1$"',
+             "color": DUNEdarkOrange},
+            {"file": "MSU_TLM_data/TLM_length/sample5.dat",
+             "length": 3.108,
+             "label": r'$1 \sfrac{1}{4}$"',
+             "color": DUNEgreen},
+            {"file": "MSU_TLM_data/TLM_length/sample3.dat",
+             "length": 3.775,
+             "label": r'$1 \sfrac{1}{2}$"',
+             "color": DUNEgray},]
+
 
 dL = 0.025
 
