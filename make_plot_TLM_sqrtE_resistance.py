@@ -37,11 +37,9 @@ for item in data:
     ax.errorbar(sqrtE, R,
                 xerr = dSqrtE,
                 yerr = dR,
-                ls = "none",
-                fmt = 'o',
-                ms = 2,
                 label = item["label"],
-                color = item["color"])
+                color = item["color"],
+                **errorbarKwargs)
     
     popt, pcov = curve_fit(R_model, 
                            sqrtE[1:], R[1:], 
@@ -62,6 +60,8 @@ for item in data:
 ax.legend(ncol = 1, **legendKwargs)
 ax.set_xlabel(r'$\sqrt{E}$ [(kV/cm)$^{1/2}$]')
 ax.set_ylabel(r'R [G$\Omega$]')
+
+# plt.text(-0.4, 1.5e-2, '(b)', **plotLabelTextKwargs)
 
 ax.set_ylim(1e-1 ,1e3)
 

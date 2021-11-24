@@ -12,12 +12,12 @@ ax = fig.gca()
 for item in data:
     if 'cut' in item:
         V, dV, I, dI = np.loadtxt(item["file"], 
-                              delimiter = ',', 
-                              skiprows = 2)[item["cut"]:].T
+                                  delimiter = ',', 
+                                  skiprows = 2)[item["cut"]:].T
     else:
         V, dV, I, dI = np.loadtxt(item["file"], 
-                              delimiter = ',', 
-                              skiprows = 2).T
+                                  delimiter = ',', 
+                                  skiprows = 2).T
     
     V /= 1000 # voltage in kV
     dV /= 1000
@@ -68,7 +68,7 @@ for item in data:
         item["popt"] = popt
         item["pcov"] = pcov
     
-ax.legend(ncol = 2, frameon = False)
+ax.legend(ncol = 1, loc = 'upper right',  **legendKwargs)
 ax.set_xlabel(r'$\sqrt{E}$ [(kV/cm)$^{|1/2}$]')
 ax.set_ylabel(r'R [G$\Omega$]')
 
@@ -76,6 +76,8 @@ ax.set_ylabel(r'R [G$\Omega$]')
 
 #ax.set_ylim(1e-1 ,1e3)
 
+plt.xlim(0.2, 2.3)
+# plt.ylim(1., 5.e2)
 plt.semilogy()  
 
 plt.tight_layout()
