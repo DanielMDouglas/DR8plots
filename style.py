@@ -25,7 +25,8 @@ DUNEcolors = [DUNEblue,
               DUNEcyan,
               DUNEpink]
 
-matplotlib.rcParams['text.latex.preamble'].append(r'\usepackage{xfrac}')
+# matplotlib.rcParams['text.latex.preamble'].append(r'\usepackage{xfrac}')
+matplotlib.rcParams['text.latex.preamble'] = r'\usepackage{xfrac}'
 
 matplotlib.rc('font', family = 'FreeSerif', size = 24, weight = 'bold')
 matplotlib.rc('text', usetex = True)
@@ -37,8 +38,8 @@ errorbarKwargs = {'ls': 'none',
                   'ms': 2}
 
 legendKwargs = {'frameon': False,
-                'prop': {'size': 20}}
+                'prop': {'size': 18}}
 
-textKwargs = {'fontdict': {'size': 20}}
+textKwargs = {'fontdict': {'size': 18}}
 
 plotLabelTextKwargs = {'fontdict': {'size': 24}}

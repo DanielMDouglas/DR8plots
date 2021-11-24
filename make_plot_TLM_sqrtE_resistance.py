@@ -62,6 +62,7 @@ ax.set_xlabel(r'$\sqrt{E}$ [(kV/cm)$^{1/2}$]')
 ax.set_ylabel(r'R [G$\Omega$]')
 
 # plt.text(-0.4, 1.5e-2, '(b)', **plotLabelTextKwargs)
+plt.grid()
 
 ax.set_ylim(1e-1 ,1e3)
 

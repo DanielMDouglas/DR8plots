@@ -20,13 +20,6 @@ for item in data:
     Rs.append(R)
     dR = dR_model(testField, *item["popt"], item["pcov"])
     dRs.append(dR)
-    print (L, R, dR)
-    plt.errorbar(L, R,
-                 xerr = dL,
-                 yerr = dR,
-                 color = item["color"],
-                 **errorbarKwargs)
-    plt.scatter(L, R, color = item["color"])
 
 popt, pcov = curve_fit(TLM_model, 
                        lengths, Rs,
@@ -40,12 +33,26 @@ print ("contact resistance at 500 V/cm = ", popt[1], "+/-", np.sqrt(pcov[1][1]))
 fineLspace = np.linspace(0, 4, 1000)
 plt.plot(fineLspace, TLM_model(fineLspace, *popt))
 
-plt.text(0, 6, 'Field Strength = '+str(round(testField**2, 2))+' kV/cm', **textKwargs)
+for item in data:
+    L = item["length"]
+    R = R_model(testField, *item["popt"])
+    dR = dR_model(testField, *item["popt"], item["pcov"])
+    plt.errorbar(L, R,
+                 xerr = dL,
+                 yerr = dR,
+                 color = item["color"],
+                 **errorbarKwargs)
+    plt.scatter(L, R, color = item["color"])
+
+
+plt.text(0.1, 6.2, 'Field Strength = '+str(round(testField**2, 2))+' kV/cm', **textKwargs)
 
 # plt.text(-.8, -2, '(a)', **plotLabelTextKwargs)
 
 plt.xlabel(r'Sample Length [cm]')
 plt.ylabel(r'Sample Resistance [G$\Omega$]')
+
+plt.grid()
 
 plt.tight_layout()
 

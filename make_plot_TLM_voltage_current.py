@@ -30,6 +30,8 @@ ax.legend(ncol = 1, **legendKwargs)
 ax.set_xlabel(r'Voltage [kV]')
 ax.set_ylabel(r'Current [mA]')
 
+plt.grid()
+
 # plt.text(-1.5, -0.01, '(a)', **plotLabelTextKwargs)
 plt.tight_layout()
 

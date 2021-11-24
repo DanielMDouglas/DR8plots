@@ -24,7 +24,7 @@ TLM_optBounds = ([0], [100])
 TLMcontModelFitFilename = 'fitted_res_models_contact_width.npy'
 
 if TLMcontModelFitFilename in os.listdir('.'):
-    data = np.load(TLMcontModelFitFilename)
+    data = np.load(TLMcontModelFitFilename, allow_pickle = True)
 else:
     data = [{"file": "MSU_TLM_data/TLM_contact/sample1.dat",
              "contwid": 2.582,

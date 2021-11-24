@@ -38,6 +38,8 @@ plt.text(1.e-1, 9.8, 'Field Strength = '+str(round(testField**2, 2))+' kV/cm', *
 plt.xlabel(r'Contact Patch Width [cm]')
 plt.ylabel(r'Sample Resistance [G$\Omega$]')
 
+plt.grid()
+
 #plt.ylim(5, 8)
 plt.semilogx()
 plt.xlim(3e-2, 4e0)

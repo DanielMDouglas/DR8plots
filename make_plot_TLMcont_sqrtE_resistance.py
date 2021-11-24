@@ -72,11 +72,12 @@ ax.legend(ncol = 1, loc = 'upper right',  **legendKwargs)
 ax.set_xlabel(r'$\sqrt{E}$ [(kV/cm)$^{|1/2}$]')
 ax.set_ylabel(r'R [G$\Omega$]')
 
+plt.grid()
 #plt.plot(fineSqrtE, R_model(fineSqrtE, *starting_values))
 
 #ax.set_ylim(1e-1 ,1e3)
 
-plt.xlim(0.2, 2.3)
+plt.xlim(0.2, 1.9)
 # plt.ylim(1., 5.e2)
 plt.semilogy()  
 

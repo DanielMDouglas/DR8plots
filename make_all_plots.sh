@@ -7,3 +7,6 @@
 
 ./make_plot_TLMcont_sqrtE_resistance.py
 ./make_plot_TLMcont_width_resistance.py
+
+./make_plot_ALT_sqrtE_resistance.py
+./make_plot_ALT_sqrtE_resRatio.py
