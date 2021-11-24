@@ -1,19 +1,27 @@
 from json import decoder
+import yaml
 
 dec = decoder.JSONDecoder()
 
-data = {'ladder':   {'infile': './alt_design_data/dr8_ladder_ln2.json',
-                     'label': r'Ladder (LN$_2$)'},
-        'full':     {'infile': './alt_design_data/dr8_ln2.json',
-                     'label': r'Full (LN$_2$)'},
-        'zebra 50': {'infile': './alt_design_data/dr8_zebra1_ln2.json',
-                     'label': r'Zebra 50\% (LN$_2$)'},
-        'zebra 75': {'infile': './alt_design_data/dr8_zebra2_ln2.json',
-                     'label': r'Zebra 75\% (LN$_2$)'},
+data = {'ladder':   {'datafile': './alt_design_data/dr8_ladder_ln2.json',
+                     'configfile': './alt_design_data/dr8_ladder_ln2.yaml',
+                     'label': r'Ladder'},
+        'full':     {'datafile': './alt_design_data/dr8_ln2.json',
+                     'configfile': './alt_design_data/dr8_ln2.yaml',
+                     'label': r'Full'},
+        'zebra 50': {'datafile': './alt_design_data/dr8_zebra1_ln2.json',
+                     'configfile': './alt_design_data/dr8_zebra1_ln2.yaml',
+                     'label': r'Zebra 50\%'},
+        'zebra 75': {'datafile': './alt_design_data/dr8_zebra2_ln2.json',
+                     'configfile': './alt_design_data/dr8_zebra2_ln2.yaml',
+                     'label': r'Zebra 75\%'},
         }
 
 for item in data.values():
-    raw_text = open(item['infile']).read()
-    json = dec.decode(raw_text)
+    raw_text = open(item['datafile']).read()
+    data_content = dec.decode(raw_text)
 
-    item.update(json)
+    config = yaml.load(open(item['configfile']), Loader=yaml.FullLoader)
+
+    item.update(data_content)
+    item.update(config)

@@ -1,10 +1,11 @@
 import numpy as np
 import os
+from style import *
 
 TLMmodelFitFilename = 'fitted_res_models.npy'
 
 if TLMmodelFitFilename in os.listdir('.'):
-    data = np.load(TLMmodelFitFilename)
+    data = np.load(TLMmodelFitFilename, allow_pickle=True)
 else:
     data = [{"file": "MSU_TLM_data/TLM_length/sample2.dat",
          "length": 1.292,

@@ -25,7 +25,8 @@ DUNEcolors = [DUNEblue,
               DUNEcyan,
               DUNEpink]
 
-matplotlib.rc('font', family = 'FreeSerif', size = 16, weight = 'bold')
+# matplotlib.rc('font', family = 'FreeSerif', size = 16, weight = 'bold')
+matplotlib.rc('font', family = 'FreeSerif', size = 24, weight = 'bold')
 matplotlib.rc('text', usetex = True)
 matplotlib.rc('axes', prop_cycle = matplotlib.cycler(color = DUNEcolors))
 matplotlib.rc('figure', figsize = (6.0, 4.8))
@@ -34,4 +35,5 @@ errorbarKwargs = {'ls': 'none',
                   'fmt': 'o',
                   'ms': 2}
 
-legendKwargs = {'frameon': False}
+legendKwargs = {'frameon': False,
+                'prop': {'size': 18}}

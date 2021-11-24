@@ -1,0 +1,25 @@
+name: dr8_zebra1_ln2
+sample_length: 11.43 # 4.5 inches in cm
+sample_width: 7.62   # 3 inches (6 0.5" strips) in cm
+
+time_range: [0,-1]
+keys: ['Current', 'Voltage']
+units:
+  Current: nA
+  Voltage: kV
+scales:
+  Voltage: 1000
+use_abs: true
+       
+bin_data: true
+bin_ref: 'Voltage'
+bin_range: [0, 41]
+bin_step: 0.05
+bin_min: 10
+
+get_res: true
+get_sres: true
+get_efield: true
+
+data_keys:
+  - data/*dr8*z1*ln2.csv

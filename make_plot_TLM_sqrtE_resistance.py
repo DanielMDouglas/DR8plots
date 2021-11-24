@@ -59,7 +59,7 @@ for item in data:
         item["popt"] = popt
         item["pcov"] = pcov
     
-ax.legend(ncol = 2, frameon = False)
+ax.legend(ncol = 1, **legendKwargs)
 ax.set_xlabel(r'$\sqrt{E}$ [(kV/cm)$^{1/2}$]')
 ax.set_ylabel(r'R [G$\Omega$]')
 

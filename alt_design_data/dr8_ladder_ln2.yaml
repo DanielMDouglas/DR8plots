@@ -1,0 +1,26 @@
+name: dr8_ladder_ln2
+sample_length: 8.89  # 3.5 inches (7 0.5" gaps) in cm
+#sample_length: 12.7  # 5 inches in cm
+sample_width: 3.81   # 1.5 inches (3 0.5" strips) in cm
+
+time_range: [1650,-1]
+keys: ['Current', 'Voltage']
+units:
+  Current: nA
+  Voltage: kV
+scales:
+  Voltage: 1000
+use_abs: true
+       
+bin_data: true
+bin_ref: 'Voltage'
+bin_range: [0, 41]
+bin_step: 0.05
+bin_min: 10
+
+get_res: true
+get_sres: true
+get_efield: true
+
+data_keys:
+  - data/*dr8*ladder*ln2.csv
